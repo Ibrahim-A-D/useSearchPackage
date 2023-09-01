@@ -1,6 +1,6 @@
 {
   "name": "use-search-field",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "a custom hook that retourn a filter list of the value",
   "author": "Ibrahim-A-D",
   "license": "MIT",
