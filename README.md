@@ -1,6 +1,10 @@
 # use-search-field
 
-> a custom hook that retourn a filter list of the value
+> a custom hook
+
+# useSearchPackage
+
+A react hook package to search for any keyword in a table
 
 [![NPM](https://img.shields.io/npm/v/use-search-field.svg)](https://www.npmjs.com/package/use-search-field) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -13,16 +17,14 @@ npm install --save use-search-field
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-import { useMyHook } from 'use-search-field'
+import { useMyHook } from "use-search-field";
 
 const Example = () => {
-  const example = useMyHook()
-  return (
-    <div>{example}</div>
-  )
-}
+  const example = useMyHook();
+  return <div>{example}</div>;
+};
 ```
 
 ## License
