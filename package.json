@@ -1,10 +1,10 @@
 {
   "name": "@ibrahim-a-d/use-search-field",
-  "version": "1.0.0",
-  "description": "a custom hook that retourn a filter list of the value",
+  "version": "1.0.1",
+  "description": "A react hook package to search for any keyword in a table",
   "author": "Ibrahim-A-D",
   "license": "MIT",
-  "repository": "Ibrahim-A-D/use-search-field",
+  "repository": "Ibrahim-A-D/useSearchPackage",
   "main": "dist/index.ts",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
