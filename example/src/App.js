@@ -11,26 +11,34 @@ import { useSearch } from 'use-search-field'
 
 const App = () => {
   const [data, setData] = useState();
-  const search = useSearch(data,["body","title"],"sunt")
+  const [search, setSearch] = useState('')
+  const dataFiltered = useSearch(data,search)
 
   const FetchData = ()=>{
     axios.get("https://jsonplaceholder.typicode.com/posts").then((response)=>{
       setData(response.data);
     })
   }
+  const onChange = (e)=>{
+    setSearch(e.target.value)
+  }
   // FetchData()
   useEffect(()=>{
     FetchData()
-    console.log("bonjour");
-  },[search]);
+  },[]);
   return (
     <div>
       <p>Bonjour</p>
-      {search?.map((elem)=>(
+      <input
+        value={search}
+        onChange={onChange}
+        placeholder={"Entrer le terme a rechercher"}
+      />
+      {dataFiltered?.map((elem)=>(
         <div key={elem.id}>
-          <p>{elem.title}</p>
+          <p>Titre {elem.title}</p>
           <hr/>
-          <p>{elem.body}</p>
+          <p>Body {elem.body}</p>
         </div>
       ))}
     </div>
